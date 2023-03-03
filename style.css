@@ -17,21 +17,19 @@ body {
     align-items: center;
 }
 
-.game-board {
-    width: 352px;
-    height: 352px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.g-reset {
+    display: grid;
+    grid-template-columns: 0;
+    grid-template-rows: 0;
 }
 
-.g16 {
+.g-16 {
     display: grid;
     grid-template-columns: repeat(16, 22px);
     grid-template-rows: repeat(16, 22px);
 }
 
-.g17 {
+.g-17 {
     display: grid;
     grid-template-columns: repeat(17, 22px);
     grid-template-rows: repeat(17, 22px);
@@ -42,7 +40,6 @@ body {
     width: 20px;
     border: 1px solid black;
     background-color: white;
-    transition: rgb(179, 44, 44) 2s ease-out;
 }
 
 .game-box:hover {
