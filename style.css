@@ -23,16 +23,13 @@ body {
     grid-template-rows: 0;
 }
 
-.g-16 {
-    display: grid;
-    grid-template-columns: repeat(16, 22px);
-    grid-template-rows: repeat(16, 22px);
+.size-slider {
+    width: 450px;
+    height: 40px;
 }
 
-.g-17 {
+.game-board {
     display: grid;
-    grid-template-columns: repeat(17, 22px);
-    grid-template-rows: repeat(17, 22px);
 }
 
 .game-box {
