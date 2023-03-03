@@ -16,7 +16,8 @@
             <p>Try this exciting digital version of etch-a-sketch!</p>
         </div>
         <div class="game-btn">
-            <input type="range" name="board-size" id="board-size"
+            <div class="range-number"></div>
+            <input type="range" name="board-size" class="size-slider" id="board-size"
                 min="1" max="20" list="board-size-markers">
             <datalist id="board-size-markers">
                 <option value="1"></option>
@@ -40,8 +41,6 @@
                 <option value="19"></option>
                 <option value="20"></option>
             </datalist>
-            <button class = "game-16">16 x 16</button>
-            <button class = "game-17">17 x 17</button>
         </div>
         <div class="game-board">
         </div>
