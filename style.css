@@ -5,11 +5,11 @@ body {
 }
 
 .main-body {
-    height: 800px;
+    height: 900px;
     width: 90%;
     background-image: inherit;
     margin: auto;
-    margin-top: 85px;
+    margin-top: 40px;
     border: 3px solid black;
     border-radius: 3px;
     display: flex;
@@ -29,15 +29,15 @@ body {
 }
 
 .gameBoard {
-    width: 500px;
-    height: 500px;
+    width: 75%;
+    height: 70%;
+    border: 1px solid black;
     display: grid;
 }
 
 .gameBox {
     height: 100%;
     width: 100%;
-    border: 1px solid black;
     background-color: white;
 }
 
