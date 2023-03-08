@@ -14,9 +14,12 @@
         <div class="game-info">
             <p>The classic Etch-a-Sketch game is now available!</p>
         </div>
-        <div class="game-btn">
-            <p>Game Board Size:</p>
-            <div class="range-number"></div>
+
+        <div class="gameSlider">
+            <div class="gameRange">
+                <p>Game Board Size:</p>
+                <div class="range-number"></div>
+            </div>
             <input type="range" name="board-size" class="size-slider" id="board-size"
                 min="1" max="100" value="50" list="board-size-markers">
             <datalist id="board-size-markers">
@@ -43,6 +46,14 @@
                 <option value="100"></option>
             </datalist>
         </div>
+
+        <div class="gameBtns">
+            <button class="btns colorBtn">Color</button>
+            <button class="btns rainbowBtn">Rainbow</button>
+            <button class="btns eraserBtn">Eraser</button>
+            <button class="btns clearBtn">Clear</button>
+        </div>
+        
         <div class="gameBoard">
         </div>
     </div>
