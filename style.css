@@ -28,19 +28,19 @@ body {
     height: 40px;
 }
 
-.game-board {
+.gameBoard {
     width: 500px;
     height: 500px;
     display: grid;
 }
 
-.game-box {
+.gameBox {
     height: 100%;
     width: 100%;
     border: 1px solid black;
     background-color: white;
 }
 
-.g-b-color {
+.gbColor {
     background-color: black;
 }
