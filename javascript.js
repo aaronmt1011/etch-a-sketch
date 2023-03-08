@@ -45,24 +45,6 @@ function boardReset() {
     }
 }
 
-/*
-function colorChange() {
-    [...document.querySelectorAll("gameBox")].forEach((gameBox) => {
-        gameBox.addEventListener("click", function() {
-            gameBoard.classList.add('g-reset');
-        })
-      })
-}
-*/
-
-
-/*
-function colorChange(e) {
-    let mainBox = gameBoxes[e];
-    console.log(e);
-}
-*/
-
 
 gameBoardSize.addEventListener('click', boardSize);
 gameBoardSize.addEventListener('mouseover', boardSize);
@@ -73,58 +55,9 @@ gameBoxes.forEach(gameBox => gameBox.addEventListener('click', colorChange));
 
 gameBoard.addEventListener(
     "mouseover", (e) => {
-        e.target.style.backgroundColor = 'black';
+        e.target.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 90%, 50%)`;
     }
 );
 
 
-/*
-gameBox.addEventListener('click', colorChange);
-gameBox.addEventListener('mouseover', colorChange);
-*/
 boardSize();
-
-
-/*
-function board16() {
-    boardReset();
-    for(let i = 1; i <= (16 * 16); i++) {
-        let gameBox = document.createElement('div');
-        gameBox.classList.add('game-box');
-        gameBoard.appendChild(gameBox);
-    }
-    gameBoard.classList.add('g-16');
-}
-
-
-
-function board17() {
-    boardReset();
-    for(let i = 1; i <= (17 * 17); i++) {
-        let gameBox = document.createElement('div');
-        gameBox.classList.add('game-box');
-        gameBoard.appendChild(gameBox);
-    }
-    gameBoard.classList.add('g-17');
-}
-*/
-
-
-
-/* slider and button eventlisteners */
-/*
-game16.addEventListener('click', board16);
-game17.addEventListener('click', board17);
-*/
-
-/*
-game16.addEventListener('click', () => {
-    boardReset();
-    board16();    
-});
-
-game17.addEventListener('click', () => {
-    boardReset();
-    board17();    
-});
-*/
