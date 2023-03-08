@@ -1,8 +1,9 @@
-const gameBoard = document.querySelector('.game-board');
+let gameBoard = document.querySelector('.gameBoard');
 let gameBoardSize = document.getElementById("board-size");
 let sizeDisplay = document.querySelector('.range-number');
 let gameBox = document.createElement('div');
-gameBox.classList.add('game-box');
+gameBox.classList.add('gameBox');
+
 
 /*
 boardSize() takes the value from the slider and uses it to change the board size
@@ -17,8 +18,7 @@ function boardSize() {
     gameBoard.style.gridTemplateRows = `repeat(${a}, auto)`
     for(let i = 1; i <= (a * a); i++) {
         gameBox = document.createElement('div');
-        gameBox.classList.add('game-box');
-        gameBox.classList.add(`gbox${i}`);
+        gameBox.classList.add('gameBox');
         gameBoard.appendChild(gameBox);
     }
 }
@@ -33,7 +33,6 @@ appplied.
 function boardReset() {
     a = document.getElementById("board-size").value;
     gameBoard.classList.add('g-reset');
-    gameBoard.classList.remove(`g-${a}`);
 
 
     /* 
@@ -46,23 +45,43 @@ function boardReset() {
     }
 }
 
-
+/*
 function colorChange() {
-    gameBox.classList.add('g-b-color');
-    console.log('hey');
+    [...document.querySelectorAll("gameBox")].forEach((gameBox) => {
+        gameBox.addEventListener("click", function() {
+            gameBoard.classList.add('g-reset');
+        })
+      })
 }
+*/
 
-[...document.querySelectorAll(".game-box")].forEach((round) => {
-    round.addEventListener("click", function() {
-      round.style.backgroundColor = "blue";
-    })
-  })
+
+/*
+function colorChange(e) {
+    let mainBox = gameBoxes[e];
+    console.log(e);
+}
+*/
 
 
 gameBoardSize.addEventListener('click', boardSize);
 gameBoardSize.addEventListener('mouseover', boardSize);
+
+/*
+gameBoxes.forEach(gameBox => gameBox.addEventListener('click', colorChange));
+*/
+
+gameBoard.addEventListener(
+    "mouseover", (e) => {
+        e.target.style.backgroundColor = 'black';
+    }
+);
+
+
+/*
+gameBox.addEventListener('click', colorChange);
 gameBox.addEventListener('mouseover', colorChange);
-gameBox.addEventListener('onmousemove', colorChange);
+*/
 boardSize();
 
 
