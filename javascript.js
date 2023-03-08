@@ -49,10 +49,6 @@ function boardReset() {
 gameBoardSize.addEventListener('click', boardSize);
 gameBoardSize.addEventListener('mouseover', boardSize);
 
-/*
-gameBoxes.forEach(gameBox => gameBox.addEventListener('click', colorChange));
-*/
-
 gameBoard.addEventListener(
     "mouseover", (e) => {
         e.target.style.backgroundColor = `hsl(${Math.floor(Math.random() * 360)}, 90%, 50%)`;
