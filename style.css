@@ -8,7 +8,7 @@ h1, p {
     margin: 0px;
 }
 
-.main-body {
+.mainBody {
     height: 900px;
     width: 90%;
     background-image: inherit;
@@ -19,6 +19,12 @@ h1, p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+}
+
+.gameInfo {
+    display: grid;
+    justify-items: center;
 }
 
 .gameSlider {
@@ -35,13 +41,13 @@ h1, p {
     gap: 5px;
 }
 
-.g-reset {
+.gReset {
     display: grid;
     grid-template-columns: 0;
     grid-template-rows: 0;
 }
 
-.size-slider {
+.sizeSlider {
     width: 450px;
     height: 40px;
 }
